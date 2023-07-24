@@ -45,31 +45,55 @@ $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="css/theme.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="containerprofile">
-            <!-- Menú desplegable en la parte superior derecha -->
-            <div class="profile-container">
-                <div class="profile-box">
-                    <div class="profile-image">
-                        <!-- Muestra la foto de perfil del usuario -->
-                        <img src="<?php echo $perfil['imagen']; ?>" alt="imagen">
-                    </div>
-                    <div class="profile-info">
-                        <h2><?php echo $perfil['nombre']; ?></h2>
-                        <p><?php echo $perfil['biografia']; ?></p>
-                        <p>Número de Teléfono: <?php echo $perfil['telefono']; ?></p>
-                        <p>Correo Electrónico: <?php echo $perfil['correo']; ?></p>
-                        <p>Contraseña: ***********</p><a href="editar_perfil.php" class="edit-button">Editar Perfil</a>
-                    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Logo o título de la página, puedes agregarlo aquí -->
+        <div class="profile-info">
+            <!-- Foto de perfil del usuario -->
+            <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
+            <!-- Nombre del usuario -->
+            <span><?php echo $perfil['nombre']; ?></span>
+        </div>
+        <div class="dropdown">
+            <!-- Flecha para desplegar el menú -->
+            <div class="arrow">&#9660;</div>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="profile.php">My Profile</a>
+                <a href="#">Group Chat</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerprofile">
+        <!-- Menú desplegable en la parte superior derecha -->
+        <div class="profile-container">
+            <div class="profile-box">
+                <div class="profile-image">
+                    <!-- Muestra la foto de perfil del usuario -->
+                    <img src="<?php echo $perfil['imagen']; ?>" alt="imagen" style="width: 72px; height: 72px;">
+                </div>
+                <div class="profile-info">
+                    <h2><?php echo $perfil['nombre']; ?></h2>
+                    <p><?php echo $perfil['biografia']; ?></p>
+                    <p>Número de Teléfono: <?php echo $perfil['telefono']; ?></p>
+                    <p>Correo Electrónico: <?php echo $perfil['correo']; ?></p>
+                    <p>Contraseña: ***********</p><a href="editar_perfil.php" class="edit-button">Editar Perfil</a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <script src="navbar.js"></script>
+</body>
+
 </html>

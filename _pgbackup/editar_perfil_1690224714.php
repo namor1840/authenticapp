@@ -82,51 +82,63 @@ $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,600,500&display=swap">
-    </head>
-    <body>
-        <div class="navbar">
-            <!-- Logo o título de la página, puedes agregarlo aquí -->
-            <div class="profile-info">
-                <!-- Foto de perfil del usuario -->
-                <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
-                <!-- Nombre del usuario --><span><?php echo $perfil['nombre']; ?></span>
-            </div>
-            <div class="dropdown">
-                <!-- Flecha para desplegar el menú -->
-                <div class="arrow">&#9660;</div>
-                <!-- Menú desplegable -->
-                <div class="dropdown-content"><a href="#">My Profile</a><a href="profile.php">Group Chat</a><a href="logout.php">Logout</a>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,600,500&display=swap">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Logo o título de la página, puedes agregarlo aquí -->
+        <div class="profile-info">
+            <!-- Foto de perfil del usuario -->
+            <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
+            <!-- Nombre del usuario -->
+            <span><?php echo $perfil['nombre']; ?></span>
+        </div>
+        <div class="dropdown">
+            <!-- Flecha para desplegar el menú -->
+            <div class="arrow">&#9660;</div>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="#">My Profile</a>
+                <a href="#">Group Chat</a>
+                <a href="logout.php">Logout</a>
             </div>
         </div>
-        <div class="containerprofile">
-            <div class="profile-container">
-                <div class="profile-box">
-                    <form class="edit-profile-form" method="post" enctype="multipart/form-data">
-                        <div class="profile-image">
-                            <!-- Muestra la foto de perfil actual del usuario -->
-                            <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil" style="width: 72px; height: 72px;">
-                            <!-- Campo para seleccionar una nueva foto de perfil -->
-                            <input type="file" name="imagen">
-                        </div>
-                        <div class="profile-info" style="flex-direction: column; align-items: flex-start; display: flex; width: 707px; height: 502px; flex-wrap: wrap;">
-                            <label for="nombre" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Nombre:</label>
-                            <input type="text" name="nombre" value="<?php echo $perfil['nombre']; ?>" style="width: 416px; height: 52px;"><br>
-                            <label for="biografia" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Biografía:</label>
-                            <textarea name="biografia" style="width: 416.93px; height: 91px;"><?php echo $perfil['biografia']; ?></textarea><br>
-                            <label for="telefono" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Número de Teléfono:</label>
-                            <input type="tel" name="telefono" value="<?php echo $perfil['telefono']; ?>" style="width: 416px; height: 52px;"><BR>
-                            <input type="submit" value="Save" style="width: 82px; height: 36px; background: #2F80ED; color: #fff; border-radius: 8px; border: none; cursor: pointer;">
-                        </div>
-                    </form>
-                </div>
+    </div>
+
+
+    <div class="containerprofile">
+        <div class="profile-container">
+            <div class="profile-box">
+                <form class="edit-profile-form" method="post" enctype="multipart/form-data">
+                    <div class="profile-image">
+                        <!-- Muestra la foto de perfil actual del usuario -->
+                        <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
+                        <!-- Campo para seleccionar una nueva foto de perfil -->
+                        <input type="file" name="imagen">
+                    </div>
+                    <div class="profile-info" style="flex-direction: column; align-items: flex-start; display: flex; width: 707px; height: 502px; flex-wrap: wrap;">
+                        <label for="nombre" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Nombre:</label>
+                        <input type="text" name="nombre" value="<?php echo $perfil['nombre']; ?>" style="width: 416px; height: 52px;">
+                        <br>
+                        <label for="biografia" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Biografía:</label>
+                        <textarea name="biografia" style="width: 416.93px; height: 91px;"><?php echo $perfil['biografia']; ?></textarea>
+                        <br>
+                        <label for="telefono" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Número de Teléfono:</label>
+                        <input type="tel" name="telefono" value="<?php echo $perfil['telefono']; ?>" style="width: 416px; height: 52px;">
+                        <BR>
+                        <input type="submit" value="Save" style="width: 82px; height: 36px; background: #2F80ED; color: #fff; border-radius: 8px; border: none; cursor: pointer;">
+                    </div>
+                </form>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
