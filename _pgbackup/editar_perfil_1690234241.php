@@ -92,21 +92,17 @@ $conn->close();
     </head>
     <body>
         <div class="navbar">
-            <img class="devchlogo" src="./devchallenges.svg" alt="Devchallenges" style="width: 130px; height: 18px; display: flex;">
+            <img class="devchlogo" src="./devchallenges.svg" alt="Devchallenges" style="width: 130px; height: 18px; justify-content: flex-start; align-content: flex-start; display: flex;">
             <div class="profile-info">
                 <!-- Foto de perfil del usuario -->
                 <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
-                <!-- Nombre del usuario -->
-                <span><?php echo $perfil['nombre']; ?></span>
+                <!-- Nombre del usuario --><span><?php echo $perfil['nombre']; ?></span>
             </div>
             <div class="dropdown">
                 <!-- Flecha para desplegar el menú -->
                 <div class="arrow">&#9660;</div>
                 <!-- Menú desplegable -->
-                <div class="dropdown-content">
-                    <a href="profile.phpo">My Profile</a>
-                    <a href="#">Group Chat</a>
-                    <a href="logout.php">Logout</a>
+                <div class="dropdown-content"><a href="#">My Profile</a><a href="profile.php">Group Chat</a><a href="logout.php">Logout</a>
                 </div>
             </div>
         </div>
@@ -124,14 +120,11 @@ $conn->close();
                         <p style="font-family: 'Noto Sans', sans-serif; font-size: 13px; font-weight: 500;">Changes will be reflected to every services</p>
                         <div class="profile-info" style="flex-direction: column; align-items: flex-start; display: flex; width: 707px; height: 502px; flex-wrap: wrap;">
                             <label for="nombre" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Nombre:</label>
-                            <input type="text" name="nombre" value="<?php echo $perfil['nombre']; ?>" style="width: 416px; height: 52px;">
-                            <br>
+                            <input type="text" name="nombre" value="<?php echo $perfil['nombre']; ?>" style="width: 416px; height: 52px;"><br>
                             <label for="biografia" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Biografía:</label>
-                            <textarea name="biografia" style="width: 416.93px; height: 91px;"><?php echo $perfil['biografia']; ?></textarea>
-                            <br>
+                            <textarea name="biografia" style="width: 416.93px; height: 91px;"><?php echo $perfil['biografia']; ?></textarea><br>
                             <label for="telefono" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Número de Teléfono:</label>
-                            <input type="tel" name="telefono" value="<?php echo $perfil['telefono']; ?>" style="width: 416px; height: 52px;">
-                            <BR>
+                            <input type="tel" name="telefono" value="<?php echo $perfil['telefono']; ?>" style="width: 416px; height: 52px;"><BR>
                             <input type="submit" value="Save" style="width: 82px; height: 36px; background: #2F80ED; color: #fff; border-radius: 8px; border: none; cursor: pointer;">
                         </div>
                     </form>

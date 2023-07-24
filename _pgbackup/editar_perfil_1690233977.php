@@ -92,7 +92,7 @@ $conn->close();
     </head>
     <body>
         <div class="navbar">
-            <img class="devchlogo" src="./devchallenges.svg" alt="Devchallenges" style="width: 130px; height: 18px; display: flex;">
+            <img src="./devchallenges.svg" alt="Devchallenges">
             <div class="profile-info">
                 <!-- Foto de perfil del usuario -->
                 <img src="<?php echo $perfil['imagen']; ?>" alt="Foto de Perfil">
@@ -104,8 +104,8 @@ $conn->close();
                 <div class="arrow">&#9660;</div>
                 <!-- Menú desplegable -->
                 <div class="dropdown-content">
-                    <a href="profile.phpo">My Profile</a>
-                    <a href="#">Group Chat</a>
+                    <a href="#">My Profile</a>
+                    <a href="profile.php">Group Chat</a>
                     <a href="logout.php">Logout</a>
                 </div>
             </div>
@@ -120,7 +120,8 @@ $conn->close();
                             <!-- Campo para seleccionar una nueva foto de perfil -->
                             <input type="file" name="imagen">
                         </div>
-                        <h1 style="font-family: 'Noto Sans', sans-serif; font-size: 24px;">Change Info</h1><br>
+                        <h1 style="font-family: 'Noto Sans', sans-serif; font-size: 24px;">Change Info</h1>
+                        <br>
                         <p style="font-family: 'Noto Sans', sans-serif; font-size: 13px; font-weight: 500;">Changes will be reflected to every services</p>
                         <div class="profile-info" style="flex-direction: column; align-items: flex-start; display: flex; width: 707px; height: 502px; flex-wrap: wrap;">
                             <label for="nombre" style="font-family: 'Noto Sans', sans-serif; font-weight: 500; font-size: 13px;">Nombre:</label>
