@@ -1,0 +1,74 @@
+/* Estilos generales de la página */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de la caja contenedora */
+.container {
+    width: 473.83px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    height: 634.3px;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.container img {
+    position: relative;
+    top: -123px;
+}
+
+/* Estilos del saludo al usuario */
+.greeting {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario de inicio de sesión */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 356px;
+    height: 48px;
+}
+
+.login-form button {
+    padding: 10px 15px;
+    background: #2F80ED;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+  
