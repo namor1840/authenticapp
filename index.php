@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO usuarios (correo, contrasena) VALUES ('$correo', '$hashedContrasena')";
     if ($conn->query($sql) === true) {
         // Redirigir a la página de inicio de sesión después del registro exitoso
-        header("Location: login.php");
+        header("Location: profile.php");
         exit();
     } else {
         echo "Error al registrar el usuario: " . $conn->error;
