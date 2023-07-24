@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: profile.php"); // Redirigir a la página de perfil después del inicio de sesión
             exit();
         } else {
-            echo "Credenciales incorrectas. Por favor, intenta nuevamente.";
+            header("location: login.php");
         }
     } else {
         echo "Credenciales incorrectas. Por favor, intenta nuevamente.";

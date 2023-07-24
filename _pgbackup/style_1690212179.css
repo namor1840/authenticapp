@@ -27,7 +27,6 @@ body {
     text-align: left;
     transform: translatex(0px) translatey(0px);
 }
-
 .containerprofile {
     width: 845.83px;
     padding: 20px;
@@ -38,15 +37,14 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: center;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     text-align: left;
     transform: translatex(0px) translatey(0px);
 }
-
 .container img {
     position: relative;
     top: -123px;
@@ -119,8 +117,7 @@ body {
     position: relative;
     top: -37px;
 }
-
-.container .socialmlogos img {
-    bottom: -4px;
-    top: 33px;
-}
+.container .socialmlogos img{
+    bottom:-4px;
+    top:33px;
+   }
